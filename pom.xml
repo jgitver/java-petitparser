@@ -60,9 +60,9 @@
 
   <modules>
     <module>petitparser-core</module>
-    <module>petitparser-json</module>
-    <module>petitparser-smalltalk</module>
-    <module>petitparser-xml</module>
+    <!--<module>petitparser-json</module>-->
+    <!--<module>petitparser-smalltalk</module>-->
+    <!--<module>petitparser-xml</module>-->
   </modules>
 
   <dependencies>
