@@ -10,10 +10,28 @@ PetitParser for Java
 [![GitHub Stars](https://img.shields.io/github/stars/petitparser/java-petitparser.svg)](https://github.com/petitparser/java-petitparser/stargazers)
 [![GitHub License](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/petitparser/java-petitparser/master/LICENSE)
 
+
 Grammars for programming languages are traditionally specified statically. They are hard to compose and reuse due to ambiguities that inevitably arise. PetitParser combines ideas from scannnerless parsing, parser combinators, parsing expression grammars and packrat parsers to model grammars and parsers as objects that can be reconfigured dynamically.
 
 This library is open source, stable and well tested. Development happens on [GitHub](https://github.com/petitparser/java-petitparser). Feel free to report issues or create a pull-request there. General questions are best asked on [StackOverflow](http://stackoverflow.com/questions/tagged/petitparser+java).
 
+# Relocation of project
+
+-----
+This project is a relocation of https://github.com/petitparser/java-petitparser to bypass temporary the [absence of petitparser on central](https://github.com/petitparser/java-petitparser/issues/15).
+
+As such version original `2.1.0` is published on central using the following coordinates:
+
+```
+<groupId>fr.brouillard.oss.com.github.petitparser</groupId>
+<artifactId>petitparser-core</artifactId>
+<version>2.1.0-jgitver</version>
+```
+----
+
+## Relocation deployment
+
+`mvn -Poss -DskipTests deploy`
 
 Installation
 ------------
@@ -83,7 +101,7 @@ Tutorial
 Writing grammars with PetitParser is simple as writing Java code. For example, to write a grammar that can parse identifiers that start with a letter followed by zero or more letter or digits is defined as follows:
 
 ```java
-import static org.petitparser.parser.primitive.CharacterParser.*;
+import static CharacterParser.*;
 
 class Example {
   public static void main(String[] arguments) {
